@@ -7,7 +7,7 @@ import { INFO } from "@/config";
 import Logo from "@/components/Logo/Logo";
 import Reveal from "@/components/Reveal/Reveal";
 import Button from "./Button";
-import { addData } from "@/actions/actions";
+import { addDoc } from "./actions";
 
 const ContactPage = () => {
   return (
@@ -70,7 +70,7 @@ export default ContactPage;
 
 const Form = () => {
   return (
-    <form className={styles.form} autoComplete="off" action={addData}>
+    <form className={styles.form} autoComplete="off" action={addDoc}>
       <div className={styles["input-group"]}>
         <Reveal>
           <input
