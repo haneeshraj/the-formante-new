@@ -20,91 +20,8 @@ const ContactPage = () => {
         type="p"
         text="Lorem ipsum dolor sit amet consectetur."
       />
-      <form className={styles.form} autoComplete="off" action={addData}>
-        <div className={styles["input-group"]}>
-          <Reveal>
-            <input
-              className={styles.input}
-              type="text"
-              id="name"
-              name="name"
-              placeholder=""
-              autoComplete="off"
-            />
-            <label className={styles.label} htmlFor="name">
-              Name
-            </label>
-          </Reveal>
-        </div>
-        <div className={styles["input-group"]}>
-          <Reveal>
-            <input
-              className={styles.input}
-              type="email"
-              id="email"
-              name="email"
-              placeholder=""
-              autoComplete="off"
-            />
-            <label className={styles.label} htmlFor="email">
-              Email
-            </label>
-          </Reveal>
-        </div>
-        <div className={styles["input-group"]}>
-          <Reveal>
-            <input
-              className={styles.input}
-              type="text"
-              id="pno"
-              name="pno"
-              pattern="^[0-9]{10}$|^$"
-              title="Please enter a valid 10-digit phone number"
-              placeholder=""
-              autoComplete="off"
-            />
-            <label htmlFor="pno" className={styles.label}>
-              Phone Number
-            </label>
-          </Reveal>
-        </div>
-        <div className={styles["input-group"]}>
-          <Reveal>
-            <input
-              type="text"
-              id="subject"
-              name="subject"
-              className={styles.input}
-              placeholder=""
-              autoComplete="off"
-            />
-            <label htmlFor="subject" className={styles.label}>
-              Subject
-            </label>
-          </Reveal>
-        </div>
-        <div className={styles["input-group"]}>
-          <Reveal>
-            <textarea
-              id="message"
-              name="message"
-              className={styles.textarea}
-              placeholder=""
-              autoComplete="off"
-            />
-            <label htmlFor="message" className={styles.label}>
-              Message
-            </label>
-          </Reveal>
-        </div>
-        <div className={styles["btn"]}>
-          <Reveal>
-            <button type="submit" className={styles.button}>
-              send message
-            </button>
-          </Reveal>
-        </div>
-      </form>
+
+      <Form />
 
       <div className={styles["contact-info"]}>
         <h4 className={styles["contact-info__heading"]}>Contact Information</h4>
@@ -150,3 +67,93 @@ const ContactPage = () => {
 };
 
 export default ContactPage;
+
+const Form = () => {
+  return (
+    <form className={styles.form} autoComplete="off" action={addData}>
+      <div className={styles["input-group"]}>
+        <Reveal>
+          <input
+            className={styles.input}
+            type="text"
+            id="name"
+            name="name"
+            placeholder=""
+            autoComplete="off"
+          />
+          <label className={styles.label} htmlFor="name">
+            Name
+          </label>
+        </Reveal>
+      </div>
+      <div className={styles["input-group"]}>
+        <Reveal>
+          <input
+            className={styles.input}
+            type="email"
+            id="email"
+            name="email"
+            placeholder=""
+            autoComplete="off"
+          />
+          <label className={styles.label} htmlFor="email">
+            Email
+          </label>
+        </Reveal>
+      </div>
+      <div className={styles["input-group"]}>
+        <Reveal>
+          <input
+            className={styles.input}
+            type="text"
+            id="pno"
+            name="pno"
+            pattern="^[0-9]{10}$|^$"
+            title="Please enter a valid 10-digit phone number"
+            placeholder=""
+            autoComplete="off"
+          />
+          <label htmlFor="pno" className={styles.label}>
+            Phone Number
+          </label>
+        </Reveal>
+      </div>
+      <div className={styles["input-group"]}>
+        <Reveal>
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+            className={styles.input}
+            placeholder=""
+            autoComplete="off"
+          />
+          <label htmlFor="subject" className={styles.label}>
+            Subject
+          </label>
+        </Reveal>
+      </div>
+      <div className={styles["input-group"]}>
+        <Reveal>
+          <textarea
+            id="message"
+            name="message"
+            className={styles.textarea}
+            placeholder=""
+            autoComplete="off"
+          />
+          <label htmlFor="message" className={styles.label}>
+            Message
+          </label>
+        </Reveal>
+      </div>
+      <div className={styles["btn"]}>
+        <Reveal>
+          <button type="submit" className={styles.button}>
+            send message
+          </button>
+        </Reveal>
+      </div>
+    </form>
+  );
+};

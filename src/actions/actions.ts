@@ -1,3 +1,5 @@
+"use server";
+
 type FormDataType = {
   name: string;
   email: string;
@@ -7,11 +9,9 @@ type FormDataType = {
 };
 
 export async function addData(formData: FormData) {
-  "use server";
-
   const rawFormData = {
     name: formData.get("name"),
   };
-
+  //  formante-contact@formante-contact.iam.gserviceaccount.com
   console.log(rawFormData);
 }
