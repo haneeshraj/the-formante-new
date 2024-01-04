@@ -3,6 +3,8 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import SmoothScroller from "@/components/SmoothScroller/SmoothScroller";
 import ScrollToTop from "@/components/ScrollToTop/ScrollToTop";
+import MusicButton from "@/components/MusicButton/MusicButton";
+import { Toaster } from "sonner";
 
 const font = Montserrat({ subsets: ["latin"] });
 
@@ -19,8 +21,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={font.className}>
-        {/* <ScrollToTop> */}
         {/* TODO: Uncomment me after development  */}
+        {/* <ScrollToTop> */}
+        <Toaster theme="dark" richColors />
+        <MusicButton />
         <SmoothScroller>{children}</SmoothScroller>
         {/* </ScrollToTop> */}
       </body>

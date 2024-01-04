@@ -5,13 +5,11 @@ import About from "@/components/Sections/Home/About/About";
 import DiscographyGrid from "@/components/Sections/Home/DiscographyGrid/DiscographyGrid";
 import Contact from "@/components/Sections/Home/Contact/Contact";
 import Footer from "@/components/Sections/Home/Footer/Footer";
-import MusicButton from "@/components/MusicButton/MusicButton";
 
 export default function Home() {
   return (
     <MaxWidthWrapper>
       <main className={styles.main}>
-        <MusicButton />
         <Intro />
         <About />
         <DiscographyGrid />

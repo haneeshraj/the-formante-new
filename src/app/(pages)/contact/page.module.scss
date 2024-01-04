@@ -135,11 +135,19 @@
   padding-block: 2rem;
   font-family: inherit;
   text-transform: capitalize;
-  background-color: $accent;
+  background-color: $white;
   font-weight: 600;
   border: none;
   border-radius: 0.6rem;
   font-size: 1.6rem;
+  color: $black;
+  cursor: pointer;
+
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: $accent;
+  }
 }
 
 .form {

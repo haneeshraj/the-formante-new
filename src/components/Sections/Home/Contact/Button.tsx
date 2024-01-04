@@ -3,6 +3,7 @@
 import copyToClipboard from "clipboard-copy";
 
 import styles from "./styles.module.scss";
+import { toast } from "sonner";
 
 const Button: React.FC<{ text: string; clipboardText: string }> = ({
   text,
@@ -11,7 +12,10 @@ const Button: React.FC<{ text: string; clipboardText: string }> = ({
   return (
     <div
       className={styles["btn-contact"]}
-      onClick={() => copyToClipboard(clipboardText)}
+      onClick={() => {
+        toast.success("Copied to clipboard");
+        copyToClipboard(clipboardText);
+      }}
     >
       {text}
     </div>
