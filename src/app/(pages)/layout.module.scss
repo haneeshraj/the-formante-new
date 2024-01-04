@@ -1,0 +1,17 @@
+@import "../../config/variables";
+@import "../../config/mixins";
+
+.container {
+  min-height: calc(100vh - 4rem);
+
+  @include respond(tab-port) {
+    padding: 5rem;
+  }
+  @include respond(phone) {
+    padding: 3rem;
+  }
+}
+
+.hamburger {
+  display: none;
+}

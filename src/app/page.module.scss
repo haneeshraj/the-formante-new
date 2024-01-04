@@ -1,0 +1,10 @@
+@import "../config/mixins";
+
+.main {
+  border-radius: 1rem;
+  overflow: hidden;
+
+  @include respond(tab-port) {
+    border-radius: 0;
+  }
+}

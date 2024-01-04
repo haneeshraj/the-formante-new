@@ -1,0 +1,230 @@
+@import "../../../config/variables";
+@import "../../../config/mixins";
+
+.container {
+  margin-top: 2rem;
+}
+
+.title {
+  font-size: 12rem;
+  margin-bottom: 3rem;
+
+  @include respond(tab-port) {
+    font-size: 6rem;
+  }
+
+  @include respond(phone) {
+    font-size: 4rem;
+  }
+}
+
+.subtitle {
+  font-size: 1.6rem;
+  opacity: 0.5;
+  margin-bottom: 3rem;
+}
+
+.input-group {
+  position: relative;
+
+  &:nth-of-type(1) {
+    grid-area: name;
+  }
+
+  &:nth-of-type(2) {
+    grid-area: email;
+  }
+
+  &:nth-of-type(3) {
+    grid-area: phone-number;
+  }
+
+  &:nth-of-type(4) {
+    grid-area: subject;
+  }
+
+  &:nth-of-type(5) {
+    grid-area: message;
+  }
+}
+
+.input {
+  width: 100%;
+  height: 6.6rem;
+  font-size: 1.6rem;
+  padding-left: 2rem;
+  background-color: transparent;
+  border: 2px solid rgba($white, 0.2);
+  color: $white;
+  font-family: inherit;
+  border-radius: 1rem;
+  transition: border 0.2s;
+
+  &:focus {
+    outline: none;
+    border: 2px solid $white;
+
+    + .label {
+      top: 0;
+      opacity: 1;
+      padding-inline: 1rem;
+    }
+  }
+
+  &:not(:placeholder-shown) + .label {
+    top: 0;
+    opacity: 1;
+    padding-inline: 1rem;
+  }
+}
+
+.label {
+  font-size: 1.6rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 2rem;
+  opacity: 0.3;
+  user-select: none;
+  cursor: text;
+  background-color: $black;
+  padding-inline: 0;
+
+  transition: top 0.5s cubic-bezier(0.38, 0.03, 0.05, 1.13), opacity 0.2s,
+    padding 0.5s cubic-bezier(0.38, 0.03, 0.05, 1.13);
+}
+
+.textarea {
+  width: 100%;
+  height: 20rem;
+  padding: 1rem 2rem;
+  font-family: inherit;
+  background-color: transparent;
+  color: $white;
+  border: 2px solid rgba($white, 0.2);
+  border-radius: 1rem;
+
+  + .label {
+    top: 3rem;
+  }
+
+  &:focus {
+    outline: none;
+    border: 2px solid $white;
+
+    + .label {
+      top: 0;
+      opacity: 1;
+      padding-inline: 1rem;
+    }
+  }
+
+  &:not(:placeholder-shown) + .label {
+    top: 0;
+    opacity: 1;
+    padding-inline: 1rem;
+  }
+}
+
+.btn {
+  grid-area: button;
+}
+
+.button {
+  width: 100%;
+  padding-block: 2rem;
+  font-family: inherit;
+  text-transform: capitalize;
+  background-color: $accent;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.6rem;
+  font-size: 1.6rem;
+}
+
+.form {
+  display: grid;
+  grid-template-areas:
+    "name email"
+    "phone-number subject"
+    "message message"
+    "message message"
+    "message message"
+    "button button";
+  gap: 4rem 2rem;
+  margin-top: 6rem;
+
+  @include respond(tab-port) {
+    grid-template-areas: "name" "email" "phone-number" "subject" "message" "message" "message" "button";
+    gap: 2rem;
+  }
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5rem;
+  width: 50rem;
+  margin: 8rem auto;
+  @include respond(tab-port) {
+    width: 100%;
+  }
+
+  &__heading {
+    font-size: 2.4rem;
+  }
+
+  &__group {
+    display: flex;
+    gap: 2rem;
+
+    @include respond(tab-port) {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    border: 1px solid $white;
+    padding: 1.6rem 3.2rem;
+    font-size: 1.4rem;
+    border-radius: 1000px;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    @include respond(tab-port) {
+      text-align: center;
+      width: 100%;
+    }
+
+    &:hover {
+      background-color: $accent;
+      border-color: $accent;
+      color: $black;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    gap: 10rem;
+    width: 80%;
+
+    @include respond(tab-port) {
+      gap: 0;
+      justify-content: space-between;
+    }
+  }
+
+  &__icon {
+    width: 2.4rem;
+    height: 2.4rem;
+    opacity: 0.3;
+    transition: all 0.2s;
+
+    &:hover {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+  }
+}

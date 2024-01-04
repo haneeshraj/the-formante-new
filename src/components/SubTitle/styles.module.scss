@@ -1,0 +1,28 @@
+@import "../../config/variables";
+
+.sub-title {
+  display: flex;
+  margin: 0 auto;
+  width: fit-content;
+  gap: 2rem;
+  margin-top: 1rem;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.sub-text,
+.circle {
+  display: inline-block;
+}
+
+.sub-text {
+  font-size: clamp(1rem, 5vw, 1.6rem);
+}
+
+.circle {
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  background-color: $white;
+}

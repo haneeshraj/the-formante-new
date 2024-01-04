@@ -1,0 +1,53 @@
+@import "../config/variables";
+
+@import "../config//mixins";
+
+::selection {
+  background-color: $accent;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: $black;
+  color: $white;
+  padding: 2rem;
+  min-height: 100vh;
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
+}
+
+.link-format {
+  text-decoration: none;
+  color: $white;
+}
+
+::-webkit-scrollbar {
+  padding: 1rem;
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(241, 241, 241, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: lighten($gray, 10%);
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: lighten($gray, 15%);
+}

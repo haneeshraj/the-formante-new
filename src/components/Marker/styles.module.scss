@@ -1,0 +1,13 @@
+@import "../../config/variables";
+
+.marker {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  opacity: 0.3;
+  margin-bottom: 3rem;
+}
+
+.text {
+  font-size: 1.6rem;
+}

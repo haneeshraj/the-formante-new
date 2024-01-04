@@ -1,0 +1,58 @@
+@import "../../config/variables";
+@import "../../config/mixins";
+
+.music-button {
+  width: 4.4rem;
+  height: 4.4rem;
+  border-radius: 50%;
+  position: fixed;
+  right: 4rem;
+  bottom: 3rem;
+  background-color: $gray;
+  z-index: $z-music-button;
+  cursor: pointer;
+  @include flex-center();
+  gap: 0.4rem;
+}
+
+.line {
+  width: 2px;
+  height: 0.2rem;
+  background-color: $white;
+  display: block;
+
+  &--line-1 {
+    height: 0.5rem;
+    animation: lineOne 1s cubic-bezier(0.57, 0.45, 0.42, 0.75) infinite;
+  }
+  &--line-2 {
+    height: 0.5rem;
+    animation: lineOne 1s cubic-bezier(0.57, 0.45, 0.42, 0.75) infinite;
+    animation-delay: -1.3s;
+  }
+  &--line-3 {
+    height: 0.5rem;
+    animation: lineOne 1s cubic-bezier(0.57, 0.45, 0.42, 0.75) infinite;
+    animation-delay: -0.5s;
+  }
+  &--line-4 {
+    height: 0.5rem;
+    animation: lineOne 1s cubic-bezier(0.57, 0.45, 0.42, 0.75) infinite;
+    animation-delay: -0.95s;
+  }
+}
+
+@keyframes lineOne {
+  0% {
+    height: 0.5rem;
+  }
+  50% {
+    height: 2rem;
+  }
+  75% {
+    height: 1rem;
+  }
+  100% {
+    height: 0.5rem;
+  }
+}

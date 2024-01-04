@@ -1,0 +1,129 @@
+@import "../../../../config/variables";
+@import "../../../../config/mixins";
+
+.container {
+  margin-block: 5rem;
+}
+
+.tab {
+  @include respond(tab-port) {
+    display: none !important;
+  }
+}
+
+.mobile {
+  @include respond("400px") {
+    display: none !important;
+  }
+}
+
+.grid {
+  position: relative;
+}
+
+.heading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+  font-size: 5rem;
+  text-align: center;
+  width: 60rem;
+
+  @include respond(tab-land) {
+    font-size: 3rem;
+    width: 40rem;
+  }
+
+  @include respond(tab-port) {
+    font-size: 2rem;
+    width: 25rem;
+  }
+}
+
+.word-container,
+.word {
+  display: inline-block;
+  overflow: hidden;
+}
+
+.discography-grid {
+  background-color: darken($secondary-bg, 75%);
+  height: 150vh;
+  display: flex;
+  flex-direction: row;
+  gap: 1vw;
+  padding: 2vw;
+  overflow: hidden;
+  position: relative;
+
+  @include respond(tab-port) {
+    height: 140vh;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($black, 0.7);
+  }
+
+  .column {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    position: relative;
+
+    @include respond(tab-port) {
+      width: calc(100% / 3);
+    }
+
+    @include respond("400px") {
+      width: calc(100% / 2);
+    }
+
+    .image-container {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      min-width: 5rem;
+      border-radius: 1rem;
+      overflow: hidden;
+      user-select: none;
+
+      img {
+        object-fit: cover;
+      }
+    }
+
+    &:nth-of-type(1) {
+      top: -50%;
+    }
+
+    &:nth-of-type(2) {
+      top: -100%;
+    }
+
+    &:nth-of-type(3) {
+      top: -75%;
+    }
+    &:nth-of-type(4) {
+      top: -105%;
+    }
+    &:nth-of-type(5) {
+      top: -60%;
+    }
+  }
+}
+
+.btn-container {
+  position: absolute;
+  bottom: 5rem;
+  right: 3rem;
+}

@@ -1,0 +1,67 @@
+@import "../../../../config/mixins";
+
+.about {
+  margin-block: 5rem;
+  height: 70rem;
+  display: flex;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+
+  @include respond(tab-port) {
+    flex-direction: column;
+    gap: 3rem;
+  }
+}
+
+.left {
+  width: 60rem;
+
+  @include respond("700px") {
+    width: 100%;
+  }
+}
+
+.main-title {
+  font-size: 3.2rem;
+  text-align: justify;
+  font-weight: 500;
+
+  @include respond(phone) {
+    font-size: 2.4rem;
+  }
+}
+
+.right {
+  width: 30rem !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  @include respond(tab-port) {
+    align-items: flex-start;
+    gap: 3rem;
+  }
+
+  @include respond("700px") {
+    width: 100%;
+  }
+
+  width: 60rem;
+}
+
+.text {
+  font-size: 1.6rem;
+  opacity: 0.3;
+  text-align: justify;
+}
+
+.word {
+  display: inline-block;
+  white-space: pre-wrap;
+  overflow: hidden;
+}

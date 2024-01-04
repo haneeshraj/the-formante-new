@@ -1,0 +1,68 @@
+@import "../../config/variables";
+@import "../../config/mixins";
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 7.6rem;
+  z-index: $z-navbar;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3rem;
+}
+
+.nav-list {
+  display: flex;
+  gap: 3rem;
+
+  @include respond(tab-port) {
+    display: none;
+  }
+}
+
+.active {
+  height: 100%;
+  width: 100%;
+  background-color: rgba($white, 0.1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 0.6rem;
+  mix-blend-mode: difference;
+}
+
+.nav-item {
+  position: relative;
+  padding: 0.6rem 1.2rem;
+  color: $white;
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.popup-hb {
+  position: fixed;
+  top: 2rem;
+  right: 4rem;
+  z-index: $z-hb-fixed;
+  scale: 0;
+
+  @include respond(tab-port) {
+    display: none;
+  }
+}
+
+.mobile-hb {
+  display: none;
+  position: fixed;
+  top: 2rem;
+  z-index: $z-hb-fixed;
+  right: 4rem;
+
+  @include respond(tab-port) {
+    display: block;
+  }
+}

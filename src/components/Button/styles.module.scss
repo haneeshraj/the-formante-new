@@ -1,0 +1,39 @@
+@import "../../config/variables";
+@import "../../config/mixins";
+
+.button {
+  text-decoration: none;
+  color: $black;
+  font-size: 1.4rem;
+  background-color: $accent;
+  padding-block: 0.4rem;
+  padding-right: 0.4rem;
+  padding-left: 1.4rem;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  border-radius: 1000px;
+  gap: 0.6rem;
+  font-weight: 600;
+  transition: all 0.4s cubic-bezier(0.02, 0.67, 0.05, 1.3);
+
+  &:hover {
+    padding-left: 1.8rem;
+    gap: 1rem;
+  }
+
+  &:hover .icon-svg {
+    transform: rotate(350deg);
+  }
+}
+
+.icon-svg {
+  scale: 0.6;
+  transition: all 0.4s cubic-bezier(0.02, 0.67, 0.05, 1.3);
+}
+
+.icon {
+  background-color: $black;
+  border-radius: 50%;
+  @include flex-center();
+}

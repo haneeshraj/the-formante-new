@@ -1,0 +1,10 @@
+.title {
+  font-size: clamp(2rem, 10vw, 13rem) !important;
+  text-transform: uppercase;
+  font-weight: 900;
+  overflow: hidden;
+}
+
+.letter {
+  display: inline-block;
+}
