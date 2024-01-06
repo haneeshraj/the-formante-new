@@ -1,14 +1,4 @@
-export type Song = {
-  coverart: string;
-  title: string;
-  artists: {
-    name: string;
-    href: string;
-  }[];
-  youtube?: string;
-  spotify?: string;
-  apple?: string;
-};
+import { Single } from "@/types/types";
 
 export const INFO = {
   phoneNumber: "+1 782-882-5427",
@@ -46,8 +36,9 @@ export const NAV_ITEMS = [
   },
 ];
 
-export const ALL_SONGS: Song[] = [
+export const ALL_SINGLES: Single[] | [] = [
   {
+    id: "1",
     coverart: "/cover-arts/dreamcatcher.png",
     title: "dreamcatcher.",
     artists: [
@@ -67,6 +58,7 @@ export const ALL_SONGS: Song[] = [
       "https://music.apple.com/us/album/dreamcatcher/1699355455?i=1699355460",
   }, // dreamcatcher.
   {
+    id: "2",
     coverart: "/cover-arts/bharavaseremix.jpeg",
     title: "Bharavase (Remix)",
     artists: [
@@ -94,6 +86,7 @@ export const ALL_SONGS: Song[] = [
       "https://music.apple.com/us/album/bharavase-remix/1640562613?i=1640562852",
   }, // Bharavase Remix
   {
+    id: "3",
     coverart: "/cover-arts/3varamremix.png",
     title: "3 Varam (Remix)",
     artists: [
@@ -109,6 +102,7 @@ export const ALL_SONGS: Song[] = [
     youtube: "https://www.youtube.com/watch?v=lrlnbYXgnPg",
   }, // 3 Varam Remix
   {
+    id: "4",
     coverart: "/cover-arts/itchremix.jpg",
     title: "Itch (Remix)",
     artists: [
@@ -132,6 +126,7 @@ export const ALL_SONGS: Song[] = [
       "https://music.apple.com/us/album/itch-feat-misheard-candy-heist-remix/1547442637?i=1547442638",
   }, // Itch remix
   {
+    id: "5",
     coverart: "/cover-arts/overthemoon.png",
     title: "Over The Moon",
     artists: [
@@ -143,6 +138,7 @@ export const ALL_SONGS: Song[] = [
     youtube: "https://www.youtube.com/watch?v=H7tpn3UuFmg",
   }, // Over the moon
   {
+    id: "6",
     coverart: "/cover-arts/stargazingwithu.png",
     title: "Stargazing With U",
     artists: [
@@ -158,6 +154,7 @@ export const ALL_SONGS: Song[] = [
       "https://music.apple.com/us/album/stargazing-with-u-single/1545969552",
   }, // Stargazing wih u
   {
+    id: "7",
     coverart: "/cover-arts/devilsadvocate.png",
     title: "Devil's Advocate",
     artists: [
@@ -169,6 +166,7 @@ export const ALL_SONGS: Song[] = [
     youtube: "https://www.youtube.com/watch?v=hT4ID3P56wY",
   }, // Devil's Advocate
   {
+    id: "8",
     coverart: "/cover-arts/chroma.jpg",
     title: "Chroma",
     artists: [
@@ -180,6 +178,7 @@ export const ALL_SONGS: Song[] = [
     youtube: "https://www.youtube.com/watch?v=7zLIvnqCF6U",
   }, // Chroma
   {
+    id: "9",
     coverart: "/cover-arts/kaliyugremix.png",
     title: "Kaliyug (Remix)",
     artists: [
@@ -199,6 +198,7 @@ export const ALL_SONGS: Song[] = [
       "https://music.apple.com/us/album/kaliyug-feat-street-academics-candy-heist-remix/1533696872?i=1533697302",
   }, // Kaliyug Remix
   {
+    id: "10",
     coverart: "/cover-arts/uni.jpg",
     title: "U & I",
     artists: [
@@ -213,6 +213,7 @@ export const ALL_SONGS: Song[] = [
     apple: "https://music.apple.com/us/album/u-i/1507763586?i=1507763590",
   }, // U & I
   {
+    id: "11",
     coverart: "/cover-arts/koibito.jpeg",
     title: "Koibito",
     artists: [
@@ -246,3 +247,7 @@ export const ALL_CLIENTELE = [
     image: "/clientele/nihalsadiq.jpg",
   },
 ];
+
+export const ALL_ALBUMS = [];
+
+export const ALL_SNIPPETS = [];

@@ -16,7 +16,7 @@ import Marker from "@/components/Marker/Marker";
 import styles from "./styles.module.scss";
 import Reveal from "@/components/Reveal/Reveal";
 import ContentWrapper from "@/components/ContentWrapper/ContentWrapper";
-import { ALL_SONGS } from "@/config/index";
+import { ALL_SINGLES } from "@/config/index";
 import clsx from "clsx";
 import { slide } from "./anim";
 import Button from "@/components/Button/Button";
@@ -77,25 +77,25 @@ const DiscographyGrid = () => {
             </h2>
             <div className={styles["discography-grid"]}>
               <Column
-                images={[ALL_SONGS[0], ALL_SONGS[1], ALL_SONGS[2]]}
+                images={[ALL_SINGLES[0], ALL_SINGLES[1], ALL_SINGLES[2]]}
                 y={y}
               />
               <Column
-                images={[ALL_SONGS[3], ALL_SONGS[4], ALL_SONGS[5]]}
+                images={[ALL_SINGLES[3], ALL_SINGLES[4], ALL_SINGLES[5]]}
                 y={y2}
               />
               <Column
-                images={[ALL_SONGS[6], ALL_SONGS[7], ALL_SONGS[8]]}
+                images={[ALL_SINGLES[6], ALL_SINGLES[7], ALL_SINGLES[8]]}
                 y={y3}
                 mobile
               />
               <Column
-                images={[ALL_SONGS[9], ALL_SONGS[10], ALL_SONGS[3]]}
+                images={[ALL_SINGLES[9], ALL_SINGLES[10], ALL_SINGLES[3]]}
                 y={y4}
                 tab
               />
               <Column
-                images={[ALL_SONGS[2], ALL_SONGS[6], ALL_SONGS[0]]}
+                images={[ALL_SINGLES[2], ALL_SINGLES[6], ALL_SINGLES[0]]}
                 y={y5}
                 tab
               />
@@ -120,7 +120,7 @@ const Column = ({
   tab,
   mobile,
 }: {
-  images: typeof ALL_SONGS;
+  images: typeof ALL_SINGLES;
   y?: MotionValue<number>;
   tab?: boolean;
   mobile?: boolean;

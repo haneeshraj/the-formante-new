@@ -1,0 +1,26 @@
+@import "../../../config/mixins";
+@import "../../../config/variables";
+
+.container {
+  margin-top: 2rem;
+}
+
+.title {
+  font-size: 9.6rem;
+  margin-bottom: 3rem;
+
+  @include respond(tab-port) {
+    font-size: 6rem;
+  }
+
+  @include respond(phone) {
+    font-size: 3.6rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.subtitle {
+  font-size: 1.6rem;
+  opacity: 0.5;
+  margin-bottom: 5rem;
+}

@@ -1,0 +1,151 @@
+@import "../../config/variables";
+@import "../../config/mixins";
+
+.selector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5rem;
+  gap: 5rem;
+  margin-bottom: 5rem;
+
+  @include respond(phone) {
+    gap: 2rem;
+  }
+
+  &__item {
+    font-size: 1.6rem;
+    color: rgba($white, 0.5);
+    cursor: pointer;
+    transition: all 300ms;
+
+    &--active {
+      color: $white;
+    }
+  }
+}
+
+.release {
+  position: relative;
+
+  &:hover &__title,
+  &:hover &__artists {
+    transform: translateX(3rem);
+
+    @include respond(phone) {
+      transform: translateX(0);
+    }
+  }
+
+  &:hover &__image-container::after {
+    background-color: rgba($black, 0.8);
+  }
+
+  &:hover &__image {
+    filter: blur(0.4);
+    transform: scale(1.2);
+  }
+
+  &__image-container {
+    position: relative;
+    width: 100%;
+    height: 50rem;
+    overflow: hidden;
+
+    @include respond(phone) {
+      height: 30rem;
+    }
+
+    &::after {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      content: "";
+      top: 0;
+      left: 0;
+      background-color: rgba($black, 0.6);
+      transition: all 300ms;
+    }
+  }
+
+  &__image {
+    object-fit: cover;
+    filter: blur(0.6rem);
+    transition: transform 700ms cubic-bezier(0.14, 0.59, 0.14, 0.97),
+      filter 300ms;
+  }
+
+  &__text-container {
+    position: absolute;
+    top: 50%;
+    left: 10rem;
+    transform: translateY(-50%);
+
+    @include respond(tab-port) {
+      left: 5rem;
+    }
+
+    @include respond(phone) {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 85%;
+    }
+  }
+
+  &__title {
+    color: $white;
+    font-size: 4.2rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    transition: all 500ms cubic-bezier(0.05, 0.66, 0.27, 0.98);
+
+    @include respond(phone) {
+      font-size: 2.4rem;
+    }
+  }
+
+  &__artists {
+    transition: all 500ms;
+  }
+
+  &__artist {
+    @include link-format();
+    font-size: 1.6rem;
+    opacity: 0.5;
+  }
+
+  &__socials {
+    display: flex;
+    position: absolute;
+    right: 4rem;
+    bottom: 2rem;
+    gap: 5rem;
+    align-items: center;
+
+    @include respond(phone) {
+      right: 50%;
+      transform: translateX(50%);
+    }
+  }
+
+  &__social {
+    height: 2.4rem;
+    width: 2.4rem;
+    opacity: 0.5;
+    transition: all 300ms;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.empty {
+  color: $white;
+  font-size: 1.6rem;
+  text-align: center;
+  margin-top: 5rem;
+  opacity: 0.5;
+  transition: all 300ms;
+}

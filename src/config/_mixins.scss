@@ -50,3 +50,8 @@ $breakpoint arquement choices:
   align-items: center;
   justify-content: center;
 }
+
+@mixin link-format() {
+  text-decoration: none;
+  color: inherit;
+}

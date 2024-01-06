@@ -8,12 +8,32 @@ datasource db {
 }
 
 model Contact {
-  id String @id @default(uuid()) @map("_id")
-  name String
-  email String
-  phone String?
-  subject String
-  message String
-  contacted Boolean @default(false)
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  name      String
+  email     String
+  phone     String?
+  subject   String
+  message   String
+  contacted Boolean  @default(false)
   createdAt DateTime @default(now())
+}
+
+model Track {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  title     String
+  coverart  String
+  youtube   String?
+  spotify   String?
+  apple     String?
+  createdAt DateTime @default(now())
+  artistIDs String[] @db.ObjectId
+  artists   Artist[] @relation(fields: [artistIDs], references: [id])
+}
+
+model Artist {
+  id       String   @id @default(auto()) @map("_id") @db.ObjectId
+  name     String
+  href     String
+  trackIDs String[] @db.ObjectId
+  tracks   Track[]  @relation(fields: [trackIDs], references: [id])
 }
