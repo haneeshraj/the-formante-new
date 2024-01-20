@@ -1,7 +1,5 @@
-import styles from "./page.module.scss";
-
 const WorkPage = () => {
-  return <div>WorkPage</div>;
+  return <></>;
 };
 
 export default WorkPage;

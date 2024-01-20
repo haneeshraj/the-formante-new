@@ -6,7 +6,6 @@ import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 
 import styles from "./styles.module.scss";
-import Icon from "../Icon/Icon";
 import Logo from "../Logo/Logo";
 import { Single } from "@/types/types";
 

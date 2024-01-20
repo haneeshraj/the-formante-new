@@ -3,10 +3,12 @@ const Logo = {
     color = "white",
     height = "48",
     width = "48",
+    className,
   }: {
     color?: "black" | "white";
     height?: string;
     width?: string;
+    className?: string;
   }) => {
     return (
       <svg
@@ -15,6 +17,7 @@ const Logo = {
         viewBox="0 0 72 72"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        className={className}
       >
         <path
           d="M37.5995 32.3036V41.8591L46.4611 50.6485L49.6469 39.0733H45.8768L37.5995 32.3036Z"

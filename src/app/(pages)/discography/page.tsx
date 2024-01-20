@@ -1,11 +1,13 @@
 import styles from "./page.module.scss";
+import { ALL_SINGLES } from "@/config";
 import { getAlbums, getSingles, getSnippets } from "@/functions/data";
 import AnimatedText from "@/components/AnimatedText/AnimatedText";
 import Reveal from "@/components/Reveal/Reveal";
 import DiscographySelector from "@/components/DiscographySelector/DiscographySelector";
 
 const DiscographyPage = async () => {
-  const singles = await getSingles();
+  // const singles = await getSingles();;
+  const singles = ALL_SINGLES;
   const albums: [] = [];
   const snippets: [] = [];
 

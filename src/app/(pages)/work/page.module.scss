@@ -1,0 +1,56 @@
+@import "../../../config/variables";
+
+.container {
+  margin-top: 2rem;
+}
+
+.heading {
+  font-size: 9.6rem;
+  margin-bottom: 3rem;
+}
+
+.sub-title {
+  font-size: 1.6rem;
+  color: rgba($white, 0.5);
+}
+
+.scroll-container {
+  display: flex;
+  margin-top: 6rem;
+  gap: 10rem;
+}
+
+.left {
+  flex: 1;
+}
+
+.work-item {
+  min-height: 100vh;
+  margin-bottom: 10rem;
+}
+
+.title {
+  font-size: 3.6rem;
+  margin-bottom: 3rem;
+}
+
+.description {
+  font-size: 1.6rem;
+  color: rgba($white, 0.5);
+  margin-bottom: 4rem;
+}
+
+.video {
+  width: 60rem;
+  height: 40rem;
+  border: none;
+  display: inline-block;
+  margin-bottom: 4rem;
+  margin-inline: auto;
+}
+
+.box {
+  height: 4rem;
+  width: 4rem;
+  background-color: $accent;
+}
