@@ -10,6 +10,8 @@ export const INFO = {
     spotify:
       "https://open.spotify.com/artist/6t7uj5uSApVdULpiJLK1sR?si=771224d8822e4a08",
     youtube: "https://www.youtube.com/channel/UCJIFPDt4YfEDdgs9gvdCnUw",
+    apple: "https://music.apple.com/us/artist/the-formante/1640563057",
+    website: "https://www.theformante.ca/",
   },
 };
 

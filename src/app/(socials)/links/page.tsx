@@ -4,6 +4,7 @@ import Logo from "@/components/Logo/Logo";
 import Link from "next/link";
 import AnimatedText from "@/components/AnimatedText/AnimatedText";
 import Reveal from "@/components/Reveal/Reveal";
+import { INFO } from "@/config";
 
 // TODO: Make the links page
 
@@ -37,27 +38,30 @@ const Page = () => {
 
       <div className={styles["links"]}>
         <div className={styles["links__socials"]}>
-          <Link href="#" className={styles["links__social"]}>
+          <Link
+            href={INFO.socials.instagram}
+            className={styles["links__social"]}
+          >
             <Logo.instagram className={styles["links__icon"]} />
             <span className={styles["links__tag"]}>@theformante</span>
           </Link>
-          <Link href="#" className={styles["links__social"]}>
+          <Link href={INFO.socials.youtube} className={styles["links__social"]}>
             <Logo.youtube className={styles["links__icon"]} />
             <span className={styles["links__tag"]}>The Formante</span>
           </Link>
-          <Link href="#" className={styles["links__social"]}>
+          <Link href={INFO.socials.spotify} className={styles["links__social"]}>
             <Logo.spotify className={styles["links__icon"]} />
             <span className={styles["links__tag"]}>The Formante</span>
           </Link>
-          <Link href="#" className={styles["links__social"]}>
+          <Link href={INFO.socials.twitter} className={styles["links__social"]}>
             <Logo.twitter className={styles["links__icon"]} />
             <span className={styles["links__tag"]}>@candy_heist</span>
           </Link>
-          <Link href="#" className={styles["links__social"]}>
+          <Link href={INFO.socials.apple} className={styles["links__social"]}>
             <Logo.apple className={styles["links__icon"]} />
             <span className={styles["links__tag"]}>The Formante</span>
           </Link>
-          <Link href="#" className={styles["links__social"]}>
+          <Link href={INFO.socials.website} className={styles["links__social"]}>
             <Logo.branding className={styles["links__icon"]} />
             <span className={styles["links__tag"]}>Website</span>
           </Link>
