@@ -22,11 +22,11 @@ export default function RootLayout({
     <html lang="en">
       <body className={font.className}>
         {/* TODO: Uncomment me after development  */}
-        {/* <ScrollToTop> */}
-        <Toaster theme="dark" richColors />
-        <MusicButton />
-        <SmoothScroller>{children}</SmoothScroller>
-        {/* </ScrollToTop> */}
+        <ScrollToTop>
+          <Toaster theme="dark" richColors />
+          <MusicButton />
+          <SmoothScroller>{children}</SmoothScroller>
+        </ScrollToTop>
       </body>
     </html>
   );

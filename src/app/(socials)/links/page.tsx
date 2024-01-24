@@ -6,8 +6,6 @@ import AnimatedText from "@/components/AnimatedText/AnimatedText";
 import Reveal from "@/components/Reveal/Reveal";
 import { INFO } from "@/config";
 
-// TODO: Make the links page
-
 const Page = () => {
   return (
     <div className={styles["container"]}>

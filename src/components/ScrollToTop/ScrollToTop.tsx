@@ -14,7 +14,7 @@ const ScrollToTop = ({ children }: { children: React.ReactNode }) => {
       },
       duration: 1.5,
       ease: "cubic-bezier(0.24, 0.28, 0, 0.94)",
-    }); // TODO: Uncommend me after development
+    });
   });
 
   return <>{children}</>;
