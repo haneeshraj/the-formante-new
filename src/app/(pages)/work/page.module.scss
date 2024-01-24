@@ -1,56 +1,53 @@
 @import "../../../config/variables";
 
-.container {
-  margin-top: 2rem;
-}
-
-.heading {
+.title {
   font-size: 9.6rem;
   margin-bottom: 3rem;
 }
 
-.sub-title {
+.main-content {
   font-size: 1.6rem;
+  margin-bottom: 5rem;
   color: rgba($white, 0.5);
 }
 
-.scroll-container {
+.item-container {
+  margin-top: 10rem;
+}
+.item {
   display: flex;
-  margin-top: 6rem;
-  gap: 10rem;
+
+  &:not(:last-child) {
+    margin-bottom: 12rem;
+  }
 }
 
-.left {
-  flex: 1;
+.subtitle {
+  font-size: 2.4rem;
 }
 
-.work-item {
-  min-height: 100vh;
-  margin-bottom: 10rem;
-}
-
-.title {
-  font-size: 3.6rem;
-  margin-bottom: 3rem;
-}
-
-.description {
-  font-size: 1.6rem;
+.content {
+  font-size: 1.8em;
   color: rgba($white, 0.5);
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
 }
 
-.video {
-  width: 60rem;
-  height: 40rem;
+.examples {
+  font-size: 2rem;
+  margin-block: 3rem;
+}
+
+.example {
   border: none;
-  display: inline-block;
-  margin-bottom: 4rem;
-  margin-inline: auto;
 }
 
-.box {
-  height: 4rem;
-  width: 4rem;
-  background-color: $accent;
+.examples-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.left,
+.right {
+  flex: 1;
 }
