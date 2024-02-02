@@ -14,34 +14,37 @@ const AboutPage = () => {
         />
         <Reveal>
           <p className={styles.content}>
-            Lorem ipsum dolor sit amet consectetur. Tortor lectus dui at
-            faucibus velit luctus. Orci at eros amet urna. Egestas facilisis sit
-            ac vulputate. Vitae ridiculus sodales enim aliquet feugiat quis
-            pretium. Mattis amet pellentesque duis malesuada magna id. Nibh
-            tempor nec aliquet elit volutpat aliquam eget fringilla. Vitae
-            tortor hendrerit pharetra ut aliquam tortor lorem. Elit nisi enim
-            lacus ac id. Ut turpis pretium praesent congue.
+            My real name is Yedu Renjith and I&#39;m a 22-year-old music
+            producer, rapper, lyricist and sound engineer from Kerala, India.
+            Currently based in Nova Scotia, Canada, I&#39;ve been into music
+            production for close to 7 years. During this time, I&#39;ve dived
+            deep into the core concepts of audio recording, mixing and mastering
+            in the pursuit of helping new artists establish a solid foundation,
+            technically speaking.
           </p>
         </Reveal>
         <Reveal>
           <p className={styles.content}>
-            Netus lacus ut diam accumsan interdum aenean elit. Nec sit eu id
-            quisque arcu etiam nisi. Fames enim orci lacus lobortis iaculis
-            urna. Quisque diam morbi dictumst eu bibendum. Aliquet nibh
-            adipiscing interdum enim auctor vulputate convallis. Odio nibh.
+            Many of the artists I&#39;ve worked with have never made music
+            before, and collectively, their biggest praise for me is my ability
+            to truly connect with their vision and bring it to life
+            successfully.
           </p>
         </Reveal>
         <Reveal>
           <h3 className={styles.subtitle}>
-            Lorem ipsum dolor sit amet consectetur.
+            I&#39;m good at what I do, that&#39;s because
           </h3>
         </Reveal>
         <Reveal>
           <p className={styles.content}>
-            Netus lacus ut diam accumsan interdum aenean elit. Nec sit eu id
-            quisque arcu etiam nisi. Fames enim orci lacus lobortis iaculis
-            urna. Quisque diam morbi dictumst eu bibendum. Aliquet nibh
-            adipiscing interdum enim auctor vulputate convallis. Odio nibh.
+            I&#39;ve spent most of my time working on electronic music, however
+            as a huge enthusiast of rap music, I&#39;ve found myself spend my
+            down time making beats and recording my vocals over it. I believe
+            I&#39;m versatile in my ability to work around multiple genres
+            instead of being stuck to one. Do send me a message from my website
+            if you&#39;d like for me to take a listen to your demo and discuss
+            where we can take things! {`:)`}
           </p>
         </Reveal>
       </div>

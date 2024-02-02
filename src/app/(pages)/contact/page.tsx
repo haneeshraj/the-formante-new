@@ -19,7 +19,7 @@ const ContactPage = () => {
       <AnimatedText
         className={styles.subtitle}
         type="p"
-        text="Lorem ipsum dolor sit amet consectetur."
+        text="or if you have any questions, fill out the form below and I'll get back to you as soon as possible."
       />
 
       <Form />

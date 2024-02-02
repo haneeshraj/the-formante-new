@@ -18,8 +18,7 @@ const DiscographyPage = async () => {
       <AnimatedText type="h2" text="Discography" className={styles.title} />
       <Reveal>
         <p className={styles.subtitle}>
-          Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet
-          consectetur.
+          A collection of all my releases over the years
         </p>
       </Reveal>
 
