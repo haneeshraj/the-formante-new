@@ -2,7 +2,6 @@
 @import "../../../../config/mixins";
 
 .footer {
-  height: 45rem;
   position: relative;
   overflow: hidden;
   background-color: $footer;
@@ -11,7 +10,6 @@
   align-items: flex-end;
 
   @include respond(tab-port) {
-    height: 55rem;
     padding: 4rem 1.5rem;
   }
 }
@@ -112,6 +110,8 @@
 
   @include respond(tab-port) {
     margin-bottom: 0;
+    flex-direction: column;
+    gap: 3rem;
   }
 }
 
