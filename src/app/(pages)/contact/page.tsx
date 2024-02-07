@@ -7,7 +7,6 @@ import { INFO } from "@/config";
 import Logo from "@/components/Logo/Logo";
 import Reveal from "@/components/Reveal/Reveal";
 import Button from "./Button";
-import { addDoc } from "./actions";
 import { Form } from "./Form";
 
 const ContactPage = () => {

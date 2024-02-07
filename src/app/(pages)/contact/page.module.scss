@@ -145,6 +145,15 @@
 
   transition: all 0.2s;
 
+  &:disabled {
+    background-color: rgba($white, 0.5);
+    cursor: not-allowed;
+
+    &:hover {
+      background-color: rgba($white, 0.5);
+    }
+  }
+
   &:hover {
     background-color: $accent;
   }

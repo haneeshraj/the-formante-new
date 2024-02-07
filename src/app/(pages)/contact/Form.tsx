@@ -4,19 +4,26 @@ import { toast } from "sonner";
 import { addDoc } from "./actions";
 import styles from "./page.module.scss";
 import Reveal from "@/components/Reveal/Reveal";
+import { useState } from "react";
+import Loader from "@/components/Loader/Loader";
 
 export const Form = () => {
+  const [loading, setLoading] = useState(false);
+
   return (
     <form
       className={styles.form}
       autoComplete="off"
+      onSubmit={() => setLoading(true)}
       action={async (formData) => {
         const res = await addDoc(formData);
 
         if (res?.error) {
           toast.error(res.error);
+          setLoading(false);
         } else {
           toast.success(res.message);
+          setLoading(false);
         }
       }}
     >
@@ -96,8 +103,8 @@ export const Form = () => {
       </div>
       <div className={styles["btn"]}>
         <Reveal>
-          <button type="submit" className={styles.button}>
-            <span>send message</span>
+          <button type="submit" className={styles.button} disabled={loading}>
+            {loading ? <Loader /> : <span>send message</span>}
           </button>
         </Reveal>
       </div>
