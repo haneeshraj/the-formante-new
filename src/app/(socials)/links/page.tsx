@@ -5,8 +5,11 @@ import Link from "next/link";
 import AnimatedText from "@/components/AnimatedText/AnimatedText";
 import Reveal from "@/components/Reveal/Reveal";
 import { INFO } from "@/config";
+import { getInfo } from "@/functions/data";
 
-const Page = () => {
+const Page = async () => {
+  const dbInfo = await getInfo();
+
   return (
     <div className={styles["container"]}>
       <div className={styles["info"]}>
@@ -37,25 +40,44 @@ const Page = () => {
       <div className={styles["links"]}>
         <div className={styles["links__socials"]}>
           <Link
-            href={INFO.socials.instagram}
+            href={dbInfo?.instagram || INFO.socials.instagram}
             className={styles["links__social"]}
           >
             <Logo.instagram className={styles["links__icon"]} />
-            <span className={styles["links__tag"]}>@theformante</span>
+            <span className={styles["links__tag"]}>
+              {`@${dbInfo?.instagram
+                .replace("https://www.instagram.com/", "")
+                .replace("/", "")}` || "@theformante"}
+            </span>
           </Link>
-          <Link href={INFO.socials.youtube} className={styles["links__social"]}>
+          <Link
+            href={dbInfo?.youtube || INFO.socials.youtube}
+            className={styles["links__social"]}
+          >
             <Logo.youtube className={styles["links__icon"]} />
             <span className={styles["links__tag"]}>The Formante</span>
           </Link>
-          <Link href={INFO.socials.spotify} className={styles["links__social"]}>
+          <Link
+            href={dbInfo?.spotify || INFO.socials.spotify}
+            className={styles["links__social"]}
+          >
             <Logo.spotify className={styles["links__icon"]} />
             <span className={styles["links__tag"]}>The Formante</span>
           </Link>
-          <Link href={INFO.socials.twitter} className={styles["links__social"]}>
+          <Link
+            href={dbInfo?.twitter || INFO.socials.twitter}
+            className={styles["links__social"]}
+          >
             <Logo.twitter className={styles["links__icon"]} />
-            <span className={styles["links__tag"]}>@candy_heist</span>
+            <span className={styles["links__tag"]}>
+              {`@${dbInfo?.twitter.replace("https://twitter.com/", "")}` ||
+                "@candy_heist"}
+            </span>
           </Link>
-          <Link href={INFO.socials.apple} className={styles["links__social"]}>
+          <Link
+            href={dbInfo?.apple || INFO.socials.apple}
+            className={styles["links__social"]}
+          >
             <Logo.apple className={styles["links__icon"]} />
             <span className={styles["links__tag"]}>The Formante</span>
           </Link>

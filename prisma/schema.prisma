@@ -37,3 +37,15 @@ model Artist {
   trackIDs String[] @db.ObjectId
   tracks   Track[]  @relation(fields: [trackIDs], references: [id])
 }
+
+model Information {
+  id        String @id @default(auto()) @map("_id") @db.ObjectId
+  // make a feld with key as "socials" and value as a list of objects with youtube, spotify, apple, instagram, and twitter
+  youtube   String
+  spotify   String
+  apple     String
+  email     String
+  instagram String
+  phone     String
+  twitter   String
+}

@@ -37,3 +37,12 @@ export async function getSnippets() {
     throw new Error("Something went wrong fetching the snippets!");
   }
 }
+
+export async function getInfo() {
+  try {
+    const socials = await prisma.information.findFirst({});
+    return socials;
+  } catch (error) {
+    throw new Error("Something went wrong fetching the socials!");
+  }
+}

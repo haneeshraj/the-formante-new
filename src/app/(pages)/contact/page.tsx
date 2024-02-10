@@ -8,19 +8,22 @@ import Logo from "@/components/Logo/Logo";
 import Reveal from "@/components/Reveal/Reveal";
 import Button from "./Button";
 import { Form } from "./Form";
+import { getInfo } from "@/functions/data";
 
-const ContactPage = () => {
+const ContactPage = async () => {
+  const dbInfo = await getInfo();
+
   return (
     <div className={styles.container}>
       <Reveal type="top">
         <h2 className={styles["title"]}>Lets work on something together.</h2>
       </Reveal>
-      <AnimatedText
-        className={styles.subtitle}
-        type="p"
-        text="or if you have any questions, fill out the form below and I'll get back to you as soon as possible."
-      />
-
+      <Reveal>
+        <p className={styles["subtitle"]}>
+          or if you have any questions, fill out the form below and I&apos;ll
+          get back to you as soon as possible.
+        </p>
+      </Reveal>
       <Form />
 
       <Reveal>
@@ -29,33 +32,39 @@ const ContactPage = () => {
             Contact Information
           </h4>
           <div className={styles["contact-info__group"]}>
-            <Button text={INFO.email} clipboardText={INFO.email} />
-            <Button text={INFO.phoneNumber} clipboardText={INFO.phoneNumber} />
+            <Button
+              text={dbInfo?.email || INFO.email}
+              clipboardText={dbInfo?.email || INFO.email}
+            />
+            <Button
+              text={dbInfo?.phone || INFO.phoneNumber}
+              clipboardText={dbInfo?.phone || INFO.phoneNumber}
+            />
           </div>
           <div className={styles["contact-info__socials"]}>
             <Link
-              href={INFO.socials.instagram}
+              href={dbInfo?.instagram || INFO.socials.instagram}
               target="_blank"
               className={styles["link"]}
             >
               <Logo.instagram className={styles["contact-info__icon"]} />
             </Link>
             <Link
-              href={INFO.socials.spotify}
+              href={dbInfo?.spotify || INFO.socials.spotify}
               target="_blank"
               className={styles["link"]}
             >
               <Logo.spotify className={styles["contact-info__icon"]} />
             </Link>
             <Link
-              href={INFO.socials.twitter}
+              href={dbInfo?.twitter || INFO.socials.twitter}
               target="_blank"
               className={styles["link"]}
             >
               <Logo.twitter className={styles["contact-info__icon"]} />
             </Link>
             <Link
-              href={INFO.socials.youtube}
+              href={dbInfo?.youtube || INFO.socials.youtube}
               target="_blank"
               className={styles["link"]}
             >
