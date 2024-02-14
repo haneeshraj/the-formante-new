@@ -18,7 +18,7 @@ export async function getSingles() {
   } catch (error) {
     console.error("Error in getSingles:", error);
 
-    throw new Error("Something went wrong fetching the singles!");
+    // throw new Error("Something went wrong fetching the singles!");
   }
 }
 
@@ -43,6 +43,6 @@ export async function getInfo() {
     const socials = await prisma.information.findFirst({});
     return socials;
   } catch (error) {
-    throw new Error("Something went wrong fetching the socials!");
+    console.error("Error in getInfo:", error);
   }
 }

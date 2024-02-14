@@ -93,8 +93,8 @@ export const ALL_SINGLES: Single[] | [] = [
     title: "3 Varam (Remix)",
     artists: [
       {
-        name: "The Formante",
-        href: "https://www.instagram.com/theformante/",
+        name: "Candy Heist",
+        href: "https://open.spotify.com/artist/4FdwQi5zjjEQDUCGSQLjRz?si=TYEdPcShQ-ecGqMxU2jm3w",
       },
       {
         name: "Anohnymouss",
@@ -109,8 +109,8 @@ export const ALL_SINGLES: Single[] | [] = [
     title: "Itch (Remix)",
     artists: [
       {
-        name: "The Formante",
-        href: "https://www.instagram.com/theformante/",
+        name: "Candy Heist",
+        href: "https://open.spotify.com/artist/4FdwQi5zjjEQDUCGSQLjRz?si=TYEdPcShQ-ecGqMxU2jm3w",
       },
       {
         name: "IX FALL$",
@@ -133,8 +133,8 @@ export const ALL_SINGLES: Single[] | [] = [
     title: "Over The Moon",
     artists: [
       {
-        name: "The Formante",
-        href: "https://www.instagram.com/theformante/",
+        name: "Candy Heist",
+        href: "https://open.spotify.com/artist/4FdwQi5zjjEQDUCGSQLjRz?si=TYEdPcShQ-ecGqMxU2jm3w",
       },
     ],
     youtube: "https://www.youtube.com/watch?v=H7tpn3UuFmg",
@@ -145,8 +145,8 @@ export const ALL_SINGLES: Single[] | [] = [
     title: "Stargazing With U",
     artists: [
       {
-        name: "The Formante",
-        href: "https://www.instagram.com/theformante/",
+        name: "Candy Heist",
+        href: "https://open.spotify.com/artist/4FdwQi5zjjEQDUCGSQLjRz?si=TYEdPcShQ-ecGqMxU2jm3w",
       },
     ],
     youtube: "https://www.youtube.com/watch?v=GIgp_qkV7b4",
@@ -161,8 +161,8 @@ export const ALL_SINGLES: Single[] | [] = [
     title: "Devil's Advocate",
     artists: [
       {
-        name: "The Formante",
-        href: "https://www.instagram.com/theformante/",
+        name: "Candy Heist",
+        href: "https://open.spotify.com/artist/4FdwQi5zjjEQDUCGSQLjRz?si=TYEdPcShQ-ecGqMxU2jm3w",
       },
     ],
     youtube: "https://www.youtube.com/watch?v=hT4ID3P56wY",
@@ -173,8 +173,8 @@ export const ALL_SINGLES: Single[] | [] = [
     title: "Chroma",
     artists: [
       {
-        name: "The Formante",
-        href: "https://www.instagram.com/theformante/",
+        name: "Candy Heist",
+        href: "https://open.spotify.com/artist/4FdwQi5zjjEQDUCGSQLjRz?si=TYEdPcShQ-ecGqMxU2jm3w",
       },
     ],
     youtube: "https://www.youtube.com/watch?v=7zLIvnqCF6U",
@@ -185,8 +185,8 @@ export const ALL_SINGLES: Single[] | [] = [
     title: "Kaliyug (Remix)",
     artists: [
       {
-        name: "The Formante",
-        href: "https://www.instagram.com/theformante/",
+        name: "Candy Heist",
+        href: "https://open.spotify.com/artist/4FdwQi5zjjEQDUCGSQLjRz?si=TYEdPcShQ-ecGqMxU2jm3w",
       },
       {
         name: "HRISHI",
@@ -205,8 +205,8 @@ export const ALL_SINGLES: Single[] | [] = [
     title: "U & I",
     artists: [
       {
-        name: "The Formante",
-        href: "https://www.instagram.com/theformante/",
+        name: "Candy Heist",
+        href: "https://open.spotify.com/artist/4FdwQi5zjjEQDUCGSQLjRz?si=TYEdPcShQ-ecGqMxU2jm3w",
       },
     ],
     youtube: "https://www.youtube.com/watch?v=KYCgyprfnAM",
@@ -220,8 +220,8 @@ export const ALL_SINGLES: Single[] | [] = [
     title: "Koibito",
     artists: [
       {
-        name: "The Formante",
-        href: "https://www.instagram.com/theformante/",
+        name: "Candy Heist",
+        href: "https://open.spotify.com/artist/4FdwQi5zjjEQDUCGSQLjRz?si=TYEdPcShQ-ecGqMxU2jm3w",
       },
     ],
     youtube: "https://www.youtube.com/watch?v=asU00rEhsFo",
