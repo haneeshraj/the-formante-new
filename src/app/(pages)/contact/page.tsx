@@ -11,14 +11,7 @@ import { Form } from "./Form";
 import { getInfo } from "@/functions/data";
 
 const ContactPage = async () => {
-  const dbInfo = (await getInfo()) || {
-    email: INFO.email,
-    phone: INFO.phoneNumber,
-    instagram: INFO.socials.instagram,
-    spotify: INFO.socials.spotify,
-    twitter: INFO.socials.twitter,
-    youtube: INFO.socials.youtube,
-  };
+  const dbInfo = await getInfo();
 
   return (
     <div className={styles.container}>
