@@ -11,8 +11,6 @@ import { Form } from "./Form";
 import { getInfo } from "@/functions/data";
 
 const ContactPage = async () => {
-  const dbInfo = await getInfo();
-
   return (
     <div className={styles.container}>
       <Reveal type="top">
@@ -32,39 +30,33 @@ const ContactPage = async () => {
             Contact Information
           </h4>
           <div className={styles["contact-info__group"]}>
-            <Button
-              text={dbInfo?.email || INFO.email}
-              clipboardText={dbInfo?.email || INFO.email}
-            />
-            <Button
-              text={dbInfo?.phone || INFO.phoneNumber}
-              clipboardText={dbInfo?.phone || INFO.phoneNumber}
-            />
+            <Button text={INFO.email} clipboardText={INFO.email} />
+            <Button text={INFO.phoneNumber} clipboardText={INFO.phoneNumber} />
           </div>
           <div className={styles["contact-info__socials"]}>
             <Link
-              href={dbInfo?.instagram || INFO.socials.instagram}
+              href={INFO.socials.instagram}
               target="_blank"
               className={styles["link"]}
             >
               <Logo.instagram className={styles["contact-info__icon"]} />
             </Link>
             <Link
-              href={dbInfo?.spotify || INFO.socials.spotify}
+              href={INFO.socials.spotify}
               target="_blank"
               className={styles["link"]}
             >
               <Logo.spotify className={styles["contact-info__icon"]} />
             </Link>
             <Link
-              href={dbInfo?.twitter || INFO.socials.twitter}
+              href={INFO.socials.twitter}
               target="_blank"
               className={styles["link"]}
             >
               <Logo.twitter className={styles["contact-info__icon"]} />
             </Link>
             <Link
-              href={dbInfo?.youtube || INFO.socials.youtube}
+              href={INFO.socials.youtube}
               target="_blank"
               className={styles["link"]}
             >
