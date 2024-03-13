@@ -1,15 +1,16 @@
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
-
 import styles from "./styles.module.scss";
 import { INFO } from "@/config";
 import Logo from "@/components/Logo/Logo";
-import clsx from "clsx";
 import Link from "next/link";
 import Reveal from "@/components/Reveal/Reveal";
+import { revalidatePath } from "next/cache";
 import { getInfo } from "@/functions/data";
 
-const Footer = async () => {
+export const Footer = async () => {
+  const socials = await getInfo();
+
+  revalidatePath("/");
+
   return (
     <Reveal>
       <div className={styles.footer}>
@@ -31,7 +32,13 @@ const Footer = async () => {
               <Reveal>
                 <div className={styles["contact-group"]}>
                   <p className={styles["title"]}>Email</p>
-                  <p className={styles["label"]}>{INFO.email}</p>
+                  <p className={styles["label"]}>
+                    {socials?.email
+                      ? !socials.email
+                        ? INFO.email
+                        : socials.email
+                      : INFO.email}
+                  </p>
                 </div>
               </Reveal>
               <Reveal>
