@@ -9,8 +9,13 @@ import Reveal from "@/components/Reveal/Reveal";
 import Button from "./Button";
 import { Form } from "./Form";
 import { getInfo } from "@/functions/data";
+import { revalidatePath } from "next/cache";
 
 const ContactPage = async () => {
+  const socials = await getInfo();
+
+  revalidatePath("/contact");
+
   return (
     <div className={styles.container}>
       <Reveal type="top">
@@ -30,33 +35,87 @@ const ContactPage = async () => {
             Contact Information
           </h4>
           <div className={styles["contact-info__group"]}>
-            <Button text={INFO.email} clipboardText={INFO.email} />
-            <Button text={INFO.phoneNumber} clipboardText={INFO.phoneNumber} />
+            <Button
+              text={
+                socials?.email
+                  ? !socials.email
+                    ? INFO.email
+                    : socials.email
+                  : INFO.email
+              }
+              clipboardText={
+                socials?.email
+                  ? !socials.email
+                    ? INFO.email
+                    : socials.email
+                  : INFO.email
+              }
+            />
+            <Button
+              text={
+                socials?.phone
+                  ? !socials.phone
+                    ? INFO.phoneNumber
+                    : socials.phone
+                  : INFO.phoneNumber
+              }
+              clipboardText={
+                socials?.phone
+                  ? !socials.phone
+                    ? INFO.phoneNumber
+                    : socials.phone
+                  : INFO.phoneNumber
+              }
+            />
           </div>
           <div className={styles["contact-info__socials"]}>
             <Link
-              href={INFO.socials.instagram}
+              href={
+                socials?.instagram
+                  ? !socials.instagram
+                    ? INFO.socials.instagram
+                    : socials.instagram
+                  : INFO.socials.instagram
+              }
               target="_blank"
               className={styles["link"]}
             >
               <Logo.instagram className={styles["contact-info__icon"]} />
             </Link>
             <Link
-              href={INFO.socials.spotify}
+              href={
+                socials?.spotify
+                  ? !socials.spotify
+                    ? INFO.socials.spotify
+                    : socials.spotify
+                  : INFO.socials.spotify
+              }
               target="_blank"
               className={styles["link"]}
             >
               <Logo.spotify className={styles["contact-info__icon"]} />
             </Link>
             <Link
-              href={INFO.socials.twitter}
+              href={
+                socials?.twitter
+                  ? !socials.twitter
+                    ? INFO.socials.twitter
+                    : socials.twitter
+                  : INFO.socials.twitter
+              }
               target="_blank"
               className={styles["link"]}
             >
               <Logo.twitter className={styles["contact-info__icon"]} />
             </Link>
             <Link
-              href={INFO.socials.youtube}
+              href={
+                socials?.youtube
+                  ? !socials.youtube
+                    ? INFO.socials.youtube
+                    : socials.youtube
+                  : INFO.socials.youtube
+              }
               target="_blank"
               className={styles["link"]}
             >

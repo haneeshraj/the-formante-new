@@ -6,8 +6,13 @@ import AnimatedText from "@/components/AnimatedText/AnimatedText";
 import LocalButton from "./Button";
 import Button from "@/components/Button/Button";
 import { INFO } from "@/config";
+import { revalidatePath } from "next/cache";
+import { getInfo } from "@/functions/data";
 
-const Contact = () => {
+const Contact = async () => {
+  const socials = await getInfo();
+
+  revalidatePath("/");
   return (
     <ContentWrapper>
       <div className={styles["contact"]}>
@@ -29,12 +34,39 @@ const Contact = () => {
               </Reveal>
               <div className={styles["btn-container"]}>
                 <Reveal>
-                  <LocalButton text={INFO.email} clipboardText={INFO.email} />
+                  <LocalButton
+                    text={
+                      socials?.email
+                        ? !socials.email
+                          ? INFO.email
+                          : socials.email
+                        : INFO.email
+                    }
+                    clipboardText={
+                      socials?.email
+                        ? !socials.email
+                          ? INFO.email
+                          : socials.email
+                        : INFO.email
+                    }
+                  />
                 </Reveal>
                 <Reveal>
                   <LocalButton
-                    text={INFO.phoneNumber}
-                    clipboardText={INFO.phoneNumber}
+                    text={
+                      socials?.phone
+                        ? !socials.phone
+                          ? INFO.phoneNumber
+                          : socials.phone
+                        : INFO.phoneNumber
+                    }
+                    clipboardText={
+                      socials?.phone
+                        ? !socials.phone
+                          ? INFO.phoneNumber
+                          : socials.phone
+                        : INFO.phoneNumber
+                    }
                   />
                 </Reveal>
               </div>
