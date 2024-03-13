@@ -1,7 +1,5 @@
 import { getInfo } from "@/functions/data";
 
-export const revalidate = 30;
-
 const page = async () => {
   const socials = await getInfo();
 
