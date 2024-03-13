@@ -32,13 +32,7 @@ export const Footer = async () => {
               <Reveal>
                 <div className={styles["contact-group"]}>
                   <p className={styles["title"]}>Email</p>
-                  <p className={styles["label"]}>
-                    {socials?.email
-                      ? !socials.email
-                        ? INFO.email
-                        : socials.email
-                      : INFO.email}
-                  </p>
+                  <p className={styles["label"]}>{socials?.email}</p>
                 </div>
               </Reveal>
               <Reveal>
