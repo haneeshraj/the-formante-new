@@ -8,6 +8,7 @@ import Menu from "@/components/Menu/Menu";
 import { AnimatePresence } from "framer-motion";
 import { useOnClickOutside } from "@/hooks/use-on-click-outside";
 import Logo from "@/components/Logo/Logo";
+import Link from "next/link";
 
 const PageLayout = ({ children }: { children: React.ReactNode }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -53,7 +54,9 @@ const PageLayout = ({ children }: { children: React.ReactNode }) => {
         {isOpen && <Menu setIsOpen={setIsOpen} ref={menuRef} />}
       </AnimatePresence>
       <div className={styles["container"]}>
-        <Logo.branding />
+        <Link href={"/"}>
+          <Logo.branding />
+        </Link>
         {children}
       </div>
     </MaxWidthWrapper>
