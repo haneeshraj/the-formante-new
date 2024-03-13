@@ -7,7 +7,7 @@ const page = async () => {
 
   console.log(socials);
 
-  return <div>{socials?.apple}</div>;
+  return <div>{socials?.apple} - test</div>;
 };
 
 export default page;
