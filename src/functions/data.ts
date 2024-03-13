@@ -44,5 +44,15 @@ export async function getInfo() {
     return socials;
   } catch (error) {
     console.error("Error in getInfo:", error);
+    return {
+      _id: "",
+      youtube: "",
+      spotify: "",
+      apple: "",
+      email: "",
+      instagram: "",
+      phone: "",
+      twitter: "",
+    };
   }
 }
