@@ -9,6 +9,8 @@ import Link from "next/link";
 import Reveal from "@/components/Reveal/Reveal";
 import { getInfo } from "@/functions/data";
 
+export const dynamic = "force-dynamic";
+
 const Footer = async () => {
   const socials = await getInfo();
 
